@@ -41,7 +41,8 @@ async function displayFamilies() {
             bunnyNameDiv.textContent = bunny.name;
             //    add an event listener to the bunny el. On click, delete the bunny, then refetch and redisplay all families.
             bunnyNameDiv.addEventListener('click', async () => {
-                await deleteBunny();
+                window.location.replace(`../edit-bunnies/?id=${bunny.id}`);
+                // await deleteBunny(bunny.id);
                 displayFamilies();
             });
             // append this bunnyEl to the bunniesEl
