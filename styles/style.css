@@ -161,12 +161,17 @@ footer {
 .family {
     width: 200px;
     margin: 10px;
-    border: solid 1px black;
+    border: solid 1px purple;
     padding: 10px;
+    background-color: rgb(241, 215, 241);
+    border-radius: 20px;
 }
 
 .family h3 {
     margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(233, 32, 132);
 }
 
 .bunnies {
@@ -175,10 +180,18 @@ footer {
 }
 
 .bunny {
-    margin: 3px;
+    margin: 10px;
     padding: 3px;
-    border: dotted 2px magenta;
+    border: dotted 2px rgb(173, 70, 173);
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color:rgb(201, 103, 223)
+}
+
+.bunny:hover{
+    color: purple;
+    border: solid 2px rgb(173, 70, 173);
 }
 
 .bunny-form {
