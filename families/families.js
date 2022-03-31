@@ -30,7 +30,7 @@ async function displayFamilies() {
         const bunnyDiv = document.createElement('div');
         // add the bunnies css class to the bunnies el, and family css class to the family el
         bunnyDiv.classList.add('bunnies');
-        familyDiv.classList.add('family');
+        familyDiv.classList.add('family', 'dropZone');
         // put the family name in the name element
         familyName.textContent = family.name;
         // for each of this family's bunnies
@@ -39,6 +39,8 @@ async function displayFamilies() {
             //make an element with the css class 'bunny', and put the bunny's name in the text content
             bunnyNameDiv.classList.add('bunny');
             bunnyNameDiv.textContent = bunny.name;
+            bunnyNameDiv.setAttribute('draggable', true);
+            // bunnyNameDiv.setAttribute('ondragstart', event.dataTransfer.setData('text/plain', null));
             //    add an event listener to the bunny el. On click, delete the bunny, then refetch and redisplay all families.
             bunnyNameDiv.addEventListener('click', async () => {
                 window.location.replace(`../edit-bunnies/?id=${bunny.id}`);
@@ -60,3 +62,4 @@ window.addEventListener('load', async () => {
 
     displayFamilies(families);
 });
+
